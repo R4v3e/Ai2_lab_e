@@ -1,0 +1,55 @@
+.container {
+    margin: auto;
+    margin-top: 10vh;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+input[type="text"], button {
+padding: 10px;
+margin: 5px 0;
+width: calc(100% - 22px);
+box-sizing: border-box;
+}
+
+button {
+background-color: #007bff;
+color: white;
+border: none;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+
+button:hover {
+background-color: #0056b3;
+}
+
+ul {
+list-style-type: none;
+padding: 0;
+}
+
+li {
+background-color: white;
+margin-bottom: 8px;
+padding: 5px;
+border: 1px solid #ddd;
+border-radius: 5px;
+}
+
+a {
+margin-left: 10px;
+color: red;
+cursor: pointer;
+}
+
+/* Additional styling for responsiveness */
+@media (max-width: 600px) {
+.container {
+    width: 80%;
+}
+}

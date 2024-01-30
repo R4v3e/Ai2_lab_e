@@ -1,0 +1,8 @@
+<button (click)="generateRandomNumber()">Generuj liczbę</button>
+<p *ngIf="randomNumber !== null">
+  Wylosowana liczba: {{ randomNumber }}
+  <span [class.lower-half]="randomNumber < max * 0.5" 
+        [class.upper-half]="randomNumber >= max * 0.5">
+    {{ message }}
+  </span>
+</p>
