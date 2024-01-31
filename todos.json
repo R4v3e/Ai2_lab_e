@@ -1,0 +1,17 @@
+{
+  "todos": [
+    {
+      "id": "1",
+      "title": "Hello World",
+      "deadline": "1900-01-01",
+      "completed": false,
+      "archived": false
+    },
+    {
+      "id": "c59e",
+      "title": "c",
+      "completed": true,
+      "archived": true
+    }
+  ]
+}

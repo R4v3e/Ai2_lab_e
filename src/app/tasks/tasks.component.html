@@ -1,0 +1,23 @@
+<div class="container">
+    <!-- New Task Form -->
+    <form class="new-task-form" (ngSubmit)="addTask()">
+      <input type="text" [(ngModel)]="newTask.title" name="title" placeholder="Task Title" required />
+      <input type="date" [(ngModel)]="newTask.deadline" name="deadline" />
+      <button type="submit">Add Task</button>
+    </form>
+  
+    <!-- Tasks List -->
+    <div class="tasks">
+        <div class="task" *ngFor="let task of tasks">
+          <div class="title" [class.completed]="task.completed">{{ task.title }}</div>
+          <div class="deadline" [class.completed]="task.completed">
+            <span *ngIf="task.deadline">{{ task.deadline | date: 'mediumDate' }}</span>
+          </div>
+          <div class="actions">
+            <input type="checkbox" [(ngModel)]="task.completed" name="completed" (change)="handleChange(task)" />
+          </div>
+        </div>
+    </div>
+
+    <button (click)="archiveCompleted()">Archive Completed</button>
+</div>
