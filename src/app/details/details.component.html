@@ -1,0 +1,23 @@
+<div class="card-container" *ngIf="person; else notFoundTemplate">
+    <div class="card">
+      <h2>Person Details</h2>
+      <div class="card-content">
+        <p><strong>First Name:</strong> {{ person.firstName }}</p>
+        <p><strong>Last Name:</strong> {{ person.lastName }}</p>
+        <p><strong>Age:</strong> {{ person.age }}</p>
+        <div class="address-section">
+          <h3>Address:</h3>
+          <p>City: {{ person.address.city }}</p>
+          <p>Street: {{ person.address.street }}</p>
+          <p>Postal Code: {{ person.address.postCode }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <ng-template #notFoundTemplate>
+    <div class="center">
+      <p>Person not found.</p>
+    </div>
+  </ng-template>
+  
