@@ -4,12 +4,24 @@
       "id": "1",
       "title": "Hello World",
       "deadline": "1900-01-01",
-      "completed": false,
+      "completed": true,
       "archived": false
     },
     {
       "id": "c59e",
       "title": "c",
+      "completed": true,
+      "archived": true
+    },
+    {
+      "id": "446e",
+      "title": "Hello world again",
+      "completed": false
+    },
+    {
+      "id": "3e7a",
+      "title": "new test task",
+      "deadline": "2024-02-14",
       "completed": true,
       "archived": true
     }

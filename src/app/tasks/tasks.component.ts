@@ -34,6 +34,11 @@ export class TasksComponent {
       error => console.error('Error adding task:', error)
     );
   }
+
+  canAddTask() : boolean {
+    return !!this.newTask.title && !!this.newTask.deadline;
+  }
+
   handleChange(task: Task): void {
     if (task.id) {
       this.tasksService.put(task).subscribe(
@@ -42,6 +47,11 @@ export class TasksComponent {
         error => console.error('Error updating task:', error)
       );
     }
+  }
+
+  canArchiveCompleted(): boolean {
+    const completedTasks = this.tasks.filter(task => task.completed && !task.archived);
+    return completedTasks.length > 0
   }
 
   archiveCompleted(): void {

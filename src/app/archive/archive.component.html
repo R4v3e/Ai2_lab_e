@@ -1,5 +1,13 @@
-<div *ngFor="let task of archivedTasks" class="task">
-    <span>{{ task.title }} - {{ task.deadline | date: 'shortDate' }}</span>
-    <button (click)="delete(task)">Delete</button>
-  </div>
-  
+<div class="task-container">
+  <mat-card *ngFor="let task of archivedTasks" class="archived-task">
+     <mat-card-header>
+      <mat-card-title>{{ task.title }}</mat-card-title>
+      <mat-card-subtitle>{{ task.deadline | date: 'shortDate' }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions>
+      <button mat-mini-fab color="warn" (click)="delete(task)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div> 

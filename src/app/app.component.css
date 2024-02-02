@@ -1,45 +1,47 @@
-/* Add this CSS to your app.component.css */
-
-/* Header Styles */
 header {
-    background-color: #083c74;
-    color: white;
     padding: 10px 20px;
     text-align: center;
     height: 5vh;
-  }
+}
   
-  header h1 {
-    margin: 0;
-    font-size: 24px;
-  }
-  
-  /* Navigation Links Styles */
-  header ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: flex-end; /* Align navigation links to the right */
-  }
-  
-  header li {
-    margin-right: 20px; /* Add some spacing between navigation links */
-  }
-  
-  header a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
-  }
-  
-  /* Footer Styles */
-  footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 20px;
-    font-size: 14px;
-    height: 5vh;
-  }
-  
+header h1 {
+  margin: 0;
+}
+
+header ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+header li {
+  margin-right: 20px; 
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+
+footer {
+  text-align: center;
+  padding: 10px 20px;
+  height: 5vh;
+}
+
+.toolbar-spacer {
+  flex: 1 1 auto;
+}
+
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+a[mat-button] {
+  color: inherit; /* Makes the link color inherit from the toolbar */
+}
